@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome – Choose Language</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      font-size: 1.1rem;
+      padding: 0.75rem 2rem;
+      margin: 0.5rem;
+      cursor: pointer;
+      border: none;
+      background-color: #444;
+      color: white;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome | Selamat Datang</h1>
+    <p>Please choose your preferred language<br>Silakan pilih bahasa Anda</p>
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('id')">Bahasa Indonesia</button>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      localStorage.setItem('lang', lang);
+      window.location.href = '/' + lang + '/';
+    }
+
+    // Auto-redirect if language already set
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang) {
+      window.location.href = '/' + savedLang + '/';
+    }
+  </script>
+</body>
+</html>
