@@ -1,6 +1,6 @@
 # Academic Portfolio Website
 
-This is the bilingual academic portfolio website of Dr. Kal, hosted on GitHub Pages and accessible via [https://kalrgx.info](https://kalrgx.info).
+This is the bilingual academic portfolio website of Kal's Research Group of Department of Physics, Institut Teknologi Bandung, Indonesia. It is hosted on GitHub Pages and accessible via [https://kalrgx.info](https://kalrgx.info).
 
 ## Structure
 
