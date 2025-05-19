@@ -1,6 +1,6 @@
 # Academic Portfolio Website
 
-This is the bilingual academic portfolio website of Dr. Kal, hosted on GitHub Pages and accessible via [https://kalrgx.lab](https://kalrgx.lab).
+This is the bilingual academic portfolio website of Dr. Kal, hosted on GitHub Pages and accessible via [https://kalrgx.lab](https://kalrgx.info).
 
 ## Structure
 
@@ -17,4 +17,4 @@ This is the bilingual academic portfolio website of Dr. Kal, hosted on GitHub Pa
 
 ## License
 
-MIT License (or you can add a custom license if needed).
+MIT License.
