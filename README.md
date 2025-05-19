@@ -1,0 +1,20 @@
+# Academic Portfolio Website
+
+This is the bilingual academic portfolio website of Dr. Kal, hosted on GitHub Pages and accessible via [https://kalrgx.lab](https://kalrgx.lab).
+
+## Structure
+
+- `/` – Language selection landing page
+- `/en/` – English version of the site
+- `/id/` – Indonesian version of the site
+- `/assets/` – Shared CSS and images
+
+## Deployment
+
+- Hosted on GitHub Pages from the `main` branch.
+- Custom domain configured via `CNAME` file and DNS setup in Namecheap.
+- HTTPS enabled and enforced.
+
+## License
+
+MIT License (or you can add a custom license if needed).
