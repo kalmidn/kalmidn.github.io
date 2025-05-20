@@ -1,4 +1,3 @@
-// Minimal dark mode toggle
 const btn = document.createElement('button');
 btn.textContent = localStorage.getItem('theme') === 'dark' ? '☀️' : '🌙';
 btn.style.cssText = 'position:fixed;bottom:1rem;right:1rem;padding:0.5rem;font-size:1.2rem;z-index:999;';
