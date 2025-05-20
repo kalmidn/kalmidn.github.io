@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -5,6 +6,7 @@ body {
   color: #222;
 }
 
+/* Navigation */
 nav {
   background-color: #f2f2f2;
   padding: 0.75rem 1rem;
@@ -25,12 +27,14 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Main content */
 main {
   max-width: 900px;
   margin: auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
+/* Footer */
 footer {
   text-align: center;
   font-size: 0.85rem;
@@ -40,6 +44,35 @@ footer {
   margin-top: 2rem;
 }
 
+/* Section Blocks */
+.block {
+  padding: 2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.light-bg {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Hero section with image */
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* Dark mode */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -57,6 +90,11 @@ body.dark-mode footer {
   color: #aaa;
 }
 
+body.dark-mode .light-bg {
+  background-color: #1b1b1b;
+}
+
+/* Print styling */
 @media print {
   nav, footer, .no-print {
     display: none !important;
