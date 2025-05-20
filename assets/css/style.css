@@ -1,25 +1,51 @@
-/* Base styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #222;
+/* ======================================================
+   THEME VARIABLES
+====================================================== */
+:root {
+  --bg-color: #fdfcf8;
+  --text-color: #222222;
+  --accent-color: #0077cc;
+  --accent-soft: #f4a261;
+  --border-color: #e5e5e5;
+  --section-bg: #f9f9f5;
 }
 
-/* Navigation */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #90caf9;
+  --accent-soft: #ffb085;
+  --border-color: #333333;
+  --section-bg: #1e1e1e;
+}
+
+/* ======================================================
+   GLOBAL STYLES
+====================================================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ======================================================
+   NAVIGATION
+====================================================== */
 nav {
-  background-color: #f2f2f2;
+  background-color: var(--section-bg);
   padding: 0.75rem 1rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
   flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
-  color: #007acc;
+  color: var(--accent-color);
   font-weight: 500;
 }
 
@@ -27,36 +53,35 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content */
+/* ======================================================
+   MAIN CONTENT
+====================================================== */
 main {
   max-width: 900px;
   margin: auto;
   padding: 2rem 1rem;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  padding: 1rem;
-  color: #888;
-  border-top: 1px solid #ccc;
-  margin-top: 2rem;
-}
-
-/* Section Blocks */
-.block {
-  padding: 2rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.light-bg {
-  background-color: #f9f9f9;
-  padding: 2rem;
+/* ======================================================
+   SECTIONS
+====================================================== */
+section.block {
+  padding: 2.5rem 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--section-bg);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-/* Hero section with image */
+/* Optional alternate effect for contrast if needed */
+section.block:nth-child(even) {
+  opacity: 0.99;
+}
+
+/* ======================================================
+   HERO SECTION
+====================================================== */
 .hero-content {
   display: flex;
   flex-wrap: wrap;
@@ -69,38 +94,44 @@ footer {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border-color);
 }
 
-/* Dark mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+/* ======================================================
+   FOOTER
+====================================================== */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 1.5rem 1rem;
+  color: var(--border-color);
+  border-top: 1px solid var(--border-color);
+  margin-top: 2rem;
 }
 
-body.dark-mode nav {
-  background-color: #1f1f1f;
-}
-
-body.dark-mode nav a {
-  color: #90caf9;
-}
-
+/* ======================================================
+   DARK MODE TOGGLE BUTTON
+====================================================== */
 body.dark-mode footer {
   color: #aaa;
 }
 
-body.dark-mode .light-bg {
-  background-color: #1b1b1b;
-}
-
-/* Print styling */
+/* ======================================================
+   PRINT STYLES
+====================================================== */
 @media print {
   nav, footer, .no-print {
     display: none !important;
   }
+
   body {
-    background: white;
-    color: black;
+    background-color: #fff;
+    color: #000;
+  }
+
+  section.block {
+    border: none;
+    background: none;
+    padding: 1rem 0;
   }
 }
